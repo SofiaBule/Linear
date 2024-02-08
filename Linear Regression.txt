@@ -1,0 +1,18 @@
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Generate some random data
+X = np.random.rand(100, 1) * 10
+y = 2 * X + np.random.randn(100, 1) * 2
+
+# Fit linear regression model
+model = LinearRegression()
+model.fit(X, y)
+
+# Get coefficients
+slope = model.coef_[0][0]
+intercept = model.intercept_
+
+print("Linear Regression Model:")
+print("Slope:", slope)
+print("Intercept:", intercept)
